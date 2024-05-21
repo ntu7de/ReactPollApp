@@ -42,6 +42,8 @@ const Poll = () => {
         fetchResponses();
     }, []);
 
+    const sortedResponses = [...responses].sort((a, b) => b.upvotes - a.upvotes);
+
     return (
         <>
             <h1>Poll City</h1>
@@ -57,7 +59,7 @@ const Poll = () => {
                 Submit
             </button>
             <h3>Previous responses:</h3>
-            {responses.map(response => (
+            {sortedResponses.map(response => (
                 <div key={response.id}>
                     <Response response={response} />
                 </div>
