@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Poll from './components/Poll'
 import './App.css'
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      <p>Hello World</p>
+      <Poll />
     </>
   )
 }
